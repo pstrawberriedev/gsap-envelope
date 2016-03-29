@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Title -->
+		<title>GSAP Envelope Animation</title>
+
+		<!-- Meta Info -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+
+		<!-- Styling -->
+		<style>
+			#emailInvasion {
+				position:absolute;
+				left:0;
+				right:0;
+				top:-1000px;
+				margin:0 auto;
+				display:block;
+				width:298px;
+				height:250px;
+				z-index:9999;
+			}
+			.envelope {
+				z-index:1000;
+				width:298px;
+				height:177px;
+				background:transparent url('envelope.png') no-repeat center top;
+			}
+			.envelopeCover {
+				z-index:1001;
+				width:298px;
+				height:115px;
+				position:absolute;
+				top:0;
+				background:transparent url('envelopecover.png') no-repeat center top;
+			}
+			.paperForm {
+				z-index:1002;
+				background:#fff;
+				//padding:30px 15px;
+				position:absolute;
+				top:0;
+				overflow:hidden;
+				height:0;
+				width:298px;
+				visibility:hidden;
+				text-align:center;
+				font-weight:bold;
+			}
+			form {
+				position:absolute;
+				width:298px;
+				top:15px;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<!-- Envelope Trigger Button -->
+		<br /><br /><br /><br /><br /><br />
+		<div id="logo" style="cursor:pointer;width:250px;padding:30px 0;font-size:18px;font-weight:bold;background:#333;color:#fff;margin:0 auto;text-align:center;">Click Me</div>
+		<br /><br /><br /><br /><br /><br />
+		
+		<!-- Envelope Element -->
+    <div id="emailInvasion">
+      <div class="envelope"></div>
+      <div class="envelopeCover"></div>
+      <div class="paperForm">
+        <form>
+          <p>GIVE US YOUR EMAIL ADDRESS NOW!</p>
+          <input name="email" type="email" />
+          <input type="submit" />
+        </form>
+      </div>
+    </div>
+		
+		<!-- Javascript -->
+		<script src="TweenMax.min.js"></script>
+		<script src="jquery-1.9.1.js"></script>
+		<script src="animation.js"></script>
+		
+	</body>
+</html>
