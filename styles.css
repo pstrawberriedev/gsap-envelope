@@ -1,43 +1,62 @@
 #emailInvasion {
-  position:absolute;
-  left:0;
-  right:0;
-  top:-1000px;
-  margin:0 auto;
-  display:block;
-  width:298px;
-  height:250px;
-  z-index:9999;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1000px;
+  margin: 0 auto;
+  display: block;
+  width: 300px;
+  height: 250px;
+  z-index: 9999;
 }
-.envelope {
-	z-index:1000;
-	width:298px;
-	height:177px;
-	background:transparent url('/Images/envelope.png') no-repeat center top;
+#emailInvasion .envelope {
+  z-index: 1000;
+  width: 300px;
+  height: 150px;
+  background: transparent url('envelope.png') no-repeat center top;
 }
-.envelopeCover {
-	z-index:1001;
-	width:298px;
-	height:115px;
-	position:absolute;
-	top:0;
-	background:transparent url('/Images/envelopecover.png') no-repeat center top;
+#emailInvasion .envelopeCover {
+  z-index: 1001;
+  width: 300px;
+  height: 97px;
+  position: absolute;
+  top: 0;
+  background: transparent url('lid.png') no-repeat center top;
+  transform-origin: center top;
+  -ms-transform-origin: center top;
+  -webkit-transform-origin: center top;
 }
-.paperForm {
-	z-index:1002;
-	background:#fff;
-	//padding:30px 15px;
-	position:absolute;
-	top:0;
-	overflow:hidden;
-	height:0;
-	width:298px;
-	visibility:hidden;
-	text-align:center;
-	font-weight:bold;
+#emailInvasion .paperForm {
+  z-index: 1002;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 0;
+  font-size: 16px;
+  width: 270px;
+  visibility: hidden;
+  padding: 8px;
+  font-family: Georgia, serif;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
 }
-form {
-	position:absolute;
-	width:298px;
-	top:15px;
+#emailInvasion .paperForm span {
+  font-weight: bold;
+}
+#emailInvasion .paperForm form {
+  position: relative;
+  width: auto;
+  margin: 10px auto;
+}
+#emailInvasion .paperForm form input {
+  display: block;
+  width: 100%;
+}
+#emailInvasion .paperForm form input:first-child {
+  margin-bottom: 8px;
 }
