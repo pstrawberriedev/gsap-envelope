@@ -92,7 +92,7 @@
 }
 #emailInvasion .paperForm .closeEnvelope {
   visibility: hidden;
-  font-size: 16px;
+  font-size: 15px;
   font-family: arial, sans-serif;
   position: absolute;
   top: -8px;
