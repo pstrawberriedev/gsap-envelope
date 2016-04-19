@@ -7,13 +7,13 @@
   display: block;
   width: 300px;
   height: 250px;
-  z-index: 9999;
+  z-index: 1000;
 }
 #emailInvasion .envelope {
   z-index: 1000;
   width: 300px;
   height: 150px;
-  background: transparent url('envelope.png') no-repeat center top;
+  background: transparent url('/Images/envelope.png') no-repeat center top;
 }
 #emailInvasion .envelopeCover {
   z-index: 1001;
@@ -21,7 +21,7 @@
   height: 97px;
   position: absolute;
   top: 0;
-  background: transparent url('lid.png') no-repeat center top;
+  background: transparent url('/Images/lid.png') no-repeat center top;
   transform-origin: center top;
   -ms-transform-origin: center top;
   -webkit-transform-origin: center top;
@@ -44,9 +44,23 @@
   -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  background: url('/Images/paperbg.png');
+}
+#emailInvasion .paperForm p {
+  margin-bottom: 0;
+}
+#emailInvasion .paperForm p.second {
+  padding-top: 2px;
+}
+#emailInvasion .paperForm p.third {
+  padding-top: 3px;
 }
 #emailInvasion .paperForm span {
   font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 18px;
+  padding-top: 2px;
 }
 #emailInvasion .paperForm form {
   position: relative;
@@ -57,6 +71,40 @@
   display: block;
   width: 100%;
 }
-#emailInvasion .paperForm form input:first-child {
-  margin-bottom: 8px;
+#emailInvasion .paperForm form input[type=email] {
+  height: 32px;
+  margin-top: -2px;
+  margin-bottom: 5px;
+}
+#emailInvasion .paperForm form input[type=submit] {
+  width: 100%;
+  font-family: arial, sans-serif;
+  background: #000;
+  text-transform: uppercase;
+  color: #fff;
+  outline: 0;
+  padding: 10px 0;
+  font-size: 14px;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+#emailInvasion .paperForm .closeEnvelope {
+  visibility: hidden;
+  font-size: 16px;
+  font-family: arial, sans-serif;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 30px;
+  height: 30px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding-top: 5px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
 }

@@ -1,33 +1,36 @@
-// Email Popup Animation Test
+// Email Popup Animation Test - Timeline
 $('#logo').on('click', function(e) {
   
   e.preventDefault();
+  
+  var tl = new TimelineLite({onComplete:tlcb});
   
   //define elements
   var all = $('#emailInvasion');
   var envelope = $('#emailInvasion .envelope');
   var cover = $('#emailInvasion .envelopeCover');
   var paper = $('#emailInvasion .paperForm');
+  var close = $('#emailInvasion .closeEnvelope');
   
   TweenLite.set(cover, {transformStyle:"preserve-3d"});
   
-  //do things!
-  TweenLite.to(all, .8, {top:200,ease:Power1.easeOut, onComplete:coverFlip})
+  tl.to(all, .5, {top:200,ease:Power1.easeOut})
+    .to(cover, 0.5, {transform:"rotateX(180deg)",ease:Power1.easeOut})
+    .to(paper, 0.25, {top:"-90px",height:15,autoAlpha:1, ease:Power1.easeOut})
+    .to(paper, 0.25, {height:200, ease:Power1.easeOut})
+    .to(paper, 0.25, {top:"-65px",autoAlpha:1, overflow:"visible",ease:Power1.easeOut})
+    .to(close, 0.25, {autoAlpha:1,ease:Power1.easeOut})
   
-  //cover flip animation
-  function coverFlip() { //transform-origin:center top;
-    TweenLite.to(cover, 0.5, {transform:"rotateX(180deg)",ease:Power1.easeOut, onComplete:envelopeOpen1})
+  function tlcb() {
+    //timeline onComplete callback (if needed)
   }
   
-  //envelope open animation
-  function envelopeOpen1() {
-    TweenLite.to(paper, 0.25, {top:"-90px",height:15,autoAlpha:1, ease:Power1.easeOut,onComplete:envelopeOpen2})
-  }
-  function envelopeOpen2() {
-    TweenLite.to(paper, 0.25, {height:200, ease:Power1.easeOut,onComplete:envelopeOpen3})
-  }
-  function envelopeOpen3() {
-    TweenLite.to(paper, 0.25, {top:"-65px",autoAlpha:1, overflow:"visible",ease:Power1.easeOut})
-  }
+  //Trigger Animation Timeline
+  tl.play();
+  
+  //Reverse Animation Timeline
+  close.on('click', function(e) {
+    tl.reverse();
+  });
   
 });
