@@ -8,6 +8,7 @@
   width: 300px;
   height: 250px;
   z-index: 1000;
+  font-family: arial, sans-serif;
 }
 #emailInvasion .envelope {
   z-index: 1000;
@@ -36,11 +37,10 @@
   margin: 0 auto;
   overflow: hidden;
   height: 0;
-  font-size: 16px;
+  font-size: 14px;
   width: 270px;
   visibility: hidden;
   padding: 8px;
-  font-family: Georgia, serif;
   -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
@@ -53,38 +53,37 @@
   padding-top: 2px;
 }
 #emailInvasion .paperForm p.third {
-  padding-top: 3px;
+  padding-top: 5px;
 }
 #emailInvasion .paperForm span {
   font-weight: bold;
   display: block;
-  margin-bottom: 3px;
-  font-size: 18px;
-  padding-top: 2px;
+  margin-bottom: 1px;
+  font-size: 16px;
+  padding-top: 5px;
 }
 #emailInvasion .paperForm form {
   position: relative;
   width: auto;
-  margin: 10px auto;
+  margin: 15px auto 0 auto;
 }
 #emailInvasion .paperForm form input {
   display: block;
   width: 100%;
 }
 #emailInvasion .paperForm form input[type=email] {
-  height: 32px;
+  height: 40px;
   margin-top: -2px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 #emailInvasion .paperForm form input[type=submit] {
   width: 100%;
-  font-family: arial, sans-serif;
   background: #000;
   text-transform: uppercase;
   color: #fff;
   outline: 0;
-  padding: 10px 0;
   font-size: 14px;
+  height: 40px;
   border: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -92,11 +91,10 @@
 }
 #emailInvasion .paperForm .closeEnvelope {
   visibility: hidden;
-  font-size: 15px;
-  font-family: arial, sans-serif;
+  font-size: 16px;
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: -12px;
+  right: -11px;
   width: 30px;
   height: 30px;
   background: #333;
